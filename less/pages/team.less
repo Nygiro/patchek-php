@@ -1,0 +1,315 @@
+            // main: ../main.less
+            .fakesection1 {
+                display: none;
+            }
+
+            .team {
+                padding-left: @nav-width;
+                ul {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    li {
+                        height: 100vh;
+                        width: 25%;
+                        background-image: url(../images/max2.png);
+                        background-size: cover;
+                        .transition;
+                        &:nth-of-type(1) {
+                            background-image: url(../images/max2.png);
+                            &:hover {
+                                width: 31%;
+                            }
+                            &:hover~li {
+                                width: 23%;
+                            }
+                            &:hover .pres .spe p {
+                                opacity: 1;
+                            }
+                            &:hover .pres .tchek {
+                                opacity: 1;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            background-image: url(../images/max3.png);
+                            &:hover {
+                                width: 31%;
+                            }
+                            &:hover~li {
+                                width: 23%;
+                            }
+                            &:hover .pres .spe p {
+                                opacity: 1;
+                            }
+                            &:hover .pres .tchek {
+                                opacity: 1;
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            background-image: url(../images/robin.png);
+                            &:hover {
+                                width: 31%;
+                            }
+                            &:hover~li {
+                                width: 23%;
+                            }
+                            &:hover .pres .spe p {
+                                opacity: 1;
+                            }
+                            &:hover .pres .tchek {
+                                opacity: 1;
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            background-image: url(../images/florian.png);
+                            &:hover {
+                                width: 31%;
+                            }
+                            &:hover~li {
+                                width: 23%;
+                            }
+                            &:hover .pres .spe p {
+                                opacity: 1;
+                            }
+                            &:hover .pres .tchek {
+                                opacity: 1;
+                            }
+                        }
+                        .pres {
+                            position: relative;
+                            top: 32%;
+                            padding-left: 25px;
+                            height: 68%;
+                            h3 {
+                                color: #f49c13;
+                                text-transform: uppercase;
+                                font-size: 40px;
+                                font-weight: 800;
+                                line-height: 60px;
+                            }
+                            h4 {
+                                color: white;
+                                text-transform: uppercase;
+                                font-size: 14px;
+                            }
+                            .spe {
+                                     position: absolute;
+                                bottom: 10%;
+                                p {
+                                    color: white;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 16px;
+                                    opacity: 0;
+                                    .transition;
+                                }
+                            }
+                            .tchek {
+                                float: right;
+                                padding-right: 5px;
+                                opacity: 0;
+                                position: absolute;
+                                bottom: 10%;
+                                right: 5px;
+                                .transition;
+                                p {
+                                    color: white;
+                                    float: left;
+                                    line-height: 35px;
+                                    font-size: 12px;
+                                }
+                                .initial {
+                                    float: left;
+                                    height: 35px;
+                                    width: 35px;
+                                    background: black;
+                                    color: white;
+                                    border-radius: 50%;
+                                    position: relative;
+                                    margin-left: 15px;
+                                    p {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 572px) and (max-width:1024px) {
+                .team ul li .pres .spe {
+                    padding-top: 50%;
+                }
+                .team {
+                    padding-left: 0px;
+                    ul {
+                        display: block;
+                        li {
+                            height: @fms;
+                            float: left;
+                            width: 50%;
+                            background-position: center center;
+                            .pres {
+                                .spe {
+                                    display: none;
+                                }
+                            }
+                            &:nth-of-type(1) {
+                                background-image: url(../images/lucas.png);
+                                &:hover {
+                                    width: 50%;
+                                }
+                                &:hover~li {
+                                    width: 50%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 1;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 1;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                background-image: url(../images/maxime.png);
+                                background-position-y: -45px;
+                                &:hover {
+                                    width: 50%;
+                                }
+                                &:hover~li {
+                                    width: 50%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 1;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 1;
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                background-image: url(../images/robin.png);
+                                &:hover {
+                                    width: 50%;
+                                }
+                                &:hover~li {
+                                    width: 50%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 1;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 1;
+                                }
+                            }
+                            &:nth-of-type(4) {
+                                background-image: url(../images/florian.png);
+                                &:hover {
+                                    width: 50%;
+                                }
+                                &:hover~li {
+                                    width: 50%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 1;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 1;
+                                }
+                            }
+                            .pres {
+                                top: 24%;
+                            }
+                        }
+                    }
+                }
+            }
+            /* Règles pour des écrans infèrieur à 480px */
+
+            @media screen and (max-width: 571px) {
+                .team {
+                    display: block;
+                    padding-left: 0px;
+                    top: 500% !important;
+                    ul {
+                        display: block;
+                        li {
+                            height: @fms;
+                            width: 100%;
+                            .pres {
+                                .spe {
+                                    display: none;
+                                }
+                            }
+                            &:nth-of-type(1) {
+                                background-image: url(../images/lucas.png);
+                                background-position-y: -135px;
+                                margin-top: 10vh;
+                                &:hover {
+                                    width: 100%;
+                                }
+                                &:hover~li {
+                                    width: 100%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 0;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 0;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                background-image: url(../images/maxime.png);
+                                &:hover {
+                                    width: 100%;
+                                }
+                                &:hover~li {
+                                    width: 100%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 0;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 0;
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                background-image: url(../images/robin.png);
+                                background-position-y: -59px;
+                                margin-top: 10vh;
+                                &:hover {
+                                    width: 100%;
+                                }
+                                &:hover~li {
+                                    width: 100%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 0;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 0;
+                                }
+                            }
+                            &:nth-of-type(4) {
+                                background-image: url(../images/florian.png);
+                                &:hover {
+                                    width: 100%;
+                                }
+                                &:hover~li {
+                                    width: 100%;
+                                }
+                                &:hover .pres .spe p {
+                                    opacity: 0;
+                                }
+                                &:hover .pres .tchek {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }

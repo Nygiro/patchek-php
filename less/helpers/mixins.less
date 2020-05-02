@@ -1,0 +1,37 @@
+// main: ../main.less
+.middle {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .transition;
+    h2 {
+        margin-top: 0px;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.right {
+    padding-left: @content-width + @nav-width;
+}
+
+.transition {
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.fleche {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    padding-left: @nav-width;
+    .transition;
+}
+
+ol.carousel-indicators li.active {
+    background-color: orange;
+}

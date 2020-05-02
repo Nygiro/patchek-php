@@ -1,0 +1,94 @@
+// main: ../main.less
+//Sidebar
+nav {
+    background: black;
+    height: 100vh;
+    position: fixed;
+    width: @nav-width;
+    z-index: 1000;
+    a {
+        img {
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+    }
+    ul {
+        text-align: center; // ELEMENT DE LA SIDEBAR
+        li {
+            &:first-child {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            &:last-child {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                a img {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                }
+            }
+        }
+        .brand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            img {
+                transform: scale(0.85);
+            }
+        }
+    }
+}
+
+// CONTENU QUI APPARAIT QUAND ON CLIQUE SUR LE BOUTON
+.content {
+    background: #f49c13;
+    height: 100vh;
+    width: @content-width;
+    position: fixed;
+    left: -@content-width + @nav-width;
+    z-index: 200;
+    .transition;
+    li {
+        padding-bottom: 45px;
+        padding-left: 15%;
+        &:first-child {
+            padding-top: 95px;
+        }
+        a {
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            &:hover {
+                color: black;
+                &:after {
+                    width: 65%;
+                    .transition;
+                }
+            }
+            &:after {
+                content: '';
+                margin-top: 5px;
+                height: 2px;
+                width: 0%;
+                background: black;
+                display: block;
+                .transition;
+            }
+        }
+    }
+}
+
+// TOGGLE CLASS POUR L'OUVERTURE DE LA SIDEBAR
+.content-open {
+    left: @nav-width;
+    z-index: 200;
+}
+
+.overflow {
+    overflow: hidden;
+}

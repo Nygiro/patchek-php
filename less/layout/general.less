@@ -1,0 +1,82 @@
+// main: ../main.less
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    padding-bottom: 50px;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+p {
+    font-size: 1.3rem;
+    line-height: 20px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+.fhs {
+    height: 100vh;
+}
+
+.mhs {
+    height: 50vh;
+}
+.fakesection {
+    display: none;
+}
+
+
+/* Règles pour des écrans infèrieur à 480px */
+
+@media screen and (max-width: 571px) {
+    .onepage-pagination {
+        display: none !important;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .agence {
+        height: @fhs;
+    }
+}
+
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
+    display: none;
+}
+
+.title {
+    display: none;
+}

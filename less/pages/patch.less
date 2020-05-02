@@ -1,0 +1,240 @@
+// main: ../main.less
+.patch {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: black;
+    background: white;
+    position: relative;
+    .left-content {
+        flex: 3;
+        position: relative;
+        .block-center {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            img:first-of-type {
+                height: 35px;
+                width: 35px;
+                position: relative;
+                left: -16%;
+                top: -50px;
+                opacity: 1;
+                .transition;
+                opacity: 0;
+            }
+            img:last-of-type {
+                height: 35px;
+                width: 35px;
+                position: relative;
+                top: 50px;
+                right: -16.5%;
+                opacity: 0;
+                .transition;
+            }
+            p {
+                text-align: center;
+                width: 33%;
+                margin: 0 auto;
+                font-size: 1.12rem;
+            }
+        }
+        h1 {
+            position: relative; // left: -1000px;
+            span {
+                opacity: 0;
+                transition: all 0.5s;
+            }
+        }
+        .logo-agence {
+            width: 150px;
+            position: absolute;
+            bottom: 0;
+            left: @nav-width;
+        }
+    }
+    .right-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        position: relative;
+        height: 100vh;
+        background: black;
+        .top {
+            position: relative;
+            width: 250px;
+            height: 50%;
+            margin: 0 auto;
+            padding-top: 37px;
+            .slider {
+                height: 250px;
+                top: 50%;
+                transform: translateY(-50%);
+                img {
+                    width: 100%;
+                    height: auto;
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .bottom {
+            color: white;
+            height: 100%;
+            h2 {
+                position: absolute;
+                top: 30%;
+                left: 4%;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: 800;
+            }
+            img {
+                position: absolute;
+                top: 35%;
+                right: 15%;
+            }
+            .top-client {
+                background-image: url(../images/one2one.png);
+                background-position: center center;
+                background-size: cover;
+                height: 26%;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                background-position-x: -60px;
+                h2 {
+                    color: white;
+                }
+            }
+            .bottom-client {
+                background-image: url(../images/copelia.png);
+                background-position: center center;
+                background-size: cover;
+                height: 26%;
+                position: absolute;
+                top: 75%;
+                width: 100%;
+                h2 {
+                    color: black;
+                }
+            }
+            p {
+                color: #F49C13;
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 20px;
+                position: absolute;
+                top: 55%;
+                left: 4%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 572px) and (max-width:1024px) {
+    .patch {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        .left-content {
+            height: 66vh;
+            .logo-agence {
+                left: 0;
+            }
+        }
+        .right-content {
+            height: 34vh;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            overflow: hidden;
+            .top {
+                height: 34vh;
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+                top: -70px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+/* Règles pour des écrans infèrieur à 480px */
+
+@media (max-width: 571px) and (orientation: landscape) {}
+
+@media screen and (max-width: 571px) {
+    .patch {
+        display: block;
+        top: 300% !important;
+        .left-content {
+            height: 90vh;
+            h1 {
+                font-size: 3rem;
+            }
+            .block-center {
+                p {
+                    width: 100%;
+                    padding: 15px;
+                }
+                img:first-of-type {
+                    left: -43%;
+                }
+                img:last-of-type {
+                    right: -43%;
+                }
+            }
+            .logo-agence {
+                left: 0px;
+            }
+            .fleche {
+                display: none;
+            }
+        }
+        .right-content {
+            padding-top: 10vh;
+            .bottom {
+                height: 90vh;
+                .top-client {
+                    background-image: url(../images/one2one.png);
+                    background-position: center center;
+                    background-size: cover;
+                    height: 25%;
+                    position: absolute;
+                    top: 42%;
+                    width: 100%;
+                }
+                .bottom-client {
+                    background-image: url(../images/copelia.png);
+                    background-position: center center;
+                    background-size: cover;
+                    height: 25%;
+                    position: absolute;
+                    top: 67%;
+                    width: 100%;
+                }
+            }
+            .carousel-indicators {
+                display: none;
+            }
+        }
+    }
+}

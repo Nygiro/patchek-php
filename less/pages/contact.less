@@ -1,0 +1,250 @@
+// main: ../main.less
+.contact {
+    clear: both;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: @nav-width;
+    .left-contact {
+        background: #F49C13;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 2;
+        text-align: right;
+        padding-top: 55px;
+        position: relative;
+        .top-contact {
+            position: absolute;
+            right: 5%;
+        }
+        h2 {
+            color: white;
+            font-weight: 600;
+            font-size: 40px;
+            padding-right: 17px;
+            padding-bottom: 25px;
+        }
+        p {
+            padding-right: 17px;
+            color: white;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 15px;
+            &:nth-of-type(2) {
+                font-weight: 600;
+                padding-top: 10px;
+            }
+            &:nth-of-type(4) {
+                font-weight: 600;
+            }
+        }
+        .contact-form {
+            input {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 9px;
+                border: none;
+                &::placeholder {
+                    font-weight: 200;
+                    color: #c1bebe;
+                }
+            }
+            input[name="nom"] {
+                transform: translateX(-50%);
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: 56%;
+            }
+            input[name="email"] {
+                transform: translateX(-50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 56%;
+            }
+            textarea {
+                padding: 9px;
+                resize: none;
+                position: absolute;
+                top: 60%;
+                transform: translateX(-50%);
+                left: 50%;
+                width: 56%;
+                border: none;
+                &::placeholder {
+                    font-weight: 200;
+                    color: #c1bebe;
+                }
+            }
+            input[type="submit"] {
+                cursor: pointer;
+                height: 40px;
+                text-align: center;
+                background: none;
+                border-color: white;
+                color: white;
+                font-size: 14px;
+                font-weight: 300;
+                transform: translateX(-50%);
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                width: 56%;
+                border: 2px solid white;
+            }
+        }
+        .num {
+            line-height: 35px;
+            width: 100%;
+            position: absolute;
+            right: 5%;
+            top: 40%;
+            li {
+                color: white;
+                font-weight: 300;
+                font-size: 14px;
+                padding-bottom: 6%;
+                width: 100%;
+                position: relative;
+                .initial {
+                    text-align: center;
+                    background: black;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    height: 35px;
+                    width: 35px;
+                    display: inline-block;
+                    position: absolute;
+                    right: 120px;
+                }
+                p {
+                    line-height: 35px;
+                    display: inline-block;
+                }
+            }
+        }
+        .btn-contact {
+            clear: both;
+            height: 40px;
+            border: 2px solid white;
+            text-align: center;
+            line-height: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            width: 56%;
+            cursor: pointer;
+            p {
+                padding-right: 0;
+                line-height: 40px;
+            }
+        }
+    }
+    .right-contact {
+        -webkit-box-flex: 4;
+        -ms-flex: 4;
+        flex: 4;
+    }
+}
+
+
+/* Règles pour des écrans compris entre 481px et 960px */
+
+@media screen and (min-width: 572px) and (max-width:1024px) {
+    .contact {
+        height: 100vh;
+        padding-left: 0px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        padding-top: 75px;
+        .left-contact {
+            height: 15vh;
+            text-align: left;
+            h2 {
+                padding-right: 35px;
+                padding-left: 5%;
+            }
+            p {
+                padding-right: 35px;
+                padding-left: 5%;
+            }
+            .top-contact {
+                float: left;
+                width: 50%;
+            }
+            .bot-contact {
+                text-align: right;
+                float: right;
+                width: 50%;
+                .num {
+                    padding-top: 0px;
+                    li {
+                        padding-bottom: 10px;
+                        .initial {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+            .btn-contact {
+                margin-right: 0px;
+                margin-left: 0px;
+                width: 200px;
+                position: absolute;
+                left: 50%;
+                top: 37%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+
+/* Règles pour des écrans infèrieur à 480px */
+
+@media screen and (max-width: 571px) {
+    .contact {
+        padding-left: 0px;
+        display: block;
+        .left-contact {
+            padding-top: 10vh;
+            width: 100%;
+            height: 90vh;
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            text-align: left;
+            .top-contact {
+                text-align: right;
+                padding-right: 6%;
+            }
+            h2 {
+                font-size: 2rem;
+                padding-top: 25px;
+            }
+            .bot-contact {
+                .num {
+                    text-align: right;
+                    padding-right: 6%;
+                    padding-top: 5vh;
+                    padding-bottom: 4vh;
+                    li {
+                        padding-bottom: 3vh;
+                    }
+                }
+            }
+        }
+        .right-contact {
+            display: none;
+        }
+    }
+}
